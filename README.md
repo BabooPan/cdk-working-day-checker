@@ -57,7 +57,7 @@ $ curl https://un5x4cgo2d.execute-api.us-west-2.amazonaws.com
 {"result": "\u660e\u5929\u8981\u4e0a\u73ed\u54e6\uff5e", "workingDay": true, "datetime": "2021-03-04T10:05:00.166838+08:00"}
 ```
 
-如果不用了，在記得透過 `cdk destory` 刪除 CloudFormation Stack
+如果不用了，記得透過 `cdk destory` 刪除 CloudFormation Stack
 
 ```bash
 $ cdk destory
