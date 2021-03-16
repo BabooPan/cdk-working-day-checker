@@ -9,7 +9,7 @@ const project = new AwsCdkTypeScriptApp({
   description: 'Check today is TW\'s working day or not.',
   defaultReleaseBranch: 'main',
   autoDetectBin: false,
-  dependabot: true,
+  dependabot: false,
   // jsiiFqn: "projen.AwsCdkTypeScriptApp",
   cdkDependencies: [
     "@aws-cdk/aws-lambda",
