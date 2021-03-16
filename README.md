@@ -1,10 +1,18 @@
-# cdk-working-day-checker 明天要不要上班
+# cdk-working-day-checker 今天要不要上班
 
 這是一個透過 AWS API Gateway, Lambda 組成 API 並透過 CDK 去做部署的範例
 
 從[政府資料開放平臺](https://data.gov.tw/)查獲資料集[中華民國政府行政機關辦公日曆表](https://data.gov.tw/dataset/14718)，加以將搜尋結果作為 API Response
 
-回覆 ***明天*** 為人事行政局發布的工作日 Working Day，抑或是可以放爛耍廢的喪屍日 Walking Dead
+回覆 ***今天*** 為人事行政局發布的工作日 Working Day，或是可以放爛耍廢的喪屍日 Walking Dead
+
+```json
+{
+    "result": "今天要上班哦～", 
+    "workingDay": true, 
+    "datetime": "2021-03-17T01:09:56.915802+08:00"
+}
+```
 
 ## Deploy
 

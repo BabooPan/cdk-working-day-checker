@@ -1,6 +1,6 @@
 {
   "name": "cdk-working-day-checker",
-  "description": "Check tomorrow is TW's working day or not.",
+  "description": "Check today is TW's working day or not.",
   "repository": {
     "type": "git",
     "url": "https://github.com/baboopan/cdk-working-day-checker.git"
@@ -35,7 +35,7 @@
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
-    "aws-cdk": "^1.91.0",
+    "aws-cdk": "^1.93.0",
     "eslint": "^7.20.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -50,16 +50,19 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@aws-cdk/assert": "^1.91.0",
-    "@aws-cdk/aws-apigatewayv2": "^1.91.0",
-    "@aws-cdk/aws-apigatewayv2-integrations": "^1.91.0",
-    "@aws-cdk/aws-lambda": "^1.91.0",
-    "@aws-cdk/aws-lambda-python": "^1.91.0",
-    "@aws-cdk/core": "^1.91.0"
+    "@aws-cdk/assert": "^1.93.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.93.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.93.0",
+    "@aws-cdk/aws-certificatemanager": "^1.93.0",
+    "@aws-cdk/aws-lambda": "^1.93.0",
+    "@aws-cdk/aws-lambda-python": "^1.93.0",
+    "@aws-cdk/aws-route53": "^1.93.0",
+    "@aws-cdk/aws-route53-targets": "^1.93.0",
+    "@aws-cdk/core": "^1.93.0"
   },
   "bundledDependencies": [],
   "license": "Apache-2.0",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "jest": {
     "testMatch": [
       "**/__tests__/**/*.ts?(x)",

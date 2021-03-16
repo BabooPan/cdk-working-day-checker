@@ -3,10 +3,10 @@ const { AwsCdkTypeScriptApp } = require('projen');
 const project = new AwsCdkTypeScriptApp({
   authorEmail: 'lpig0818@gmail.com',
   authorName: 'Baboo Pan',
-  cdkVersion: '1.91.0',
+  cdkVersion: '1.94.0',
   name: 'cdk-working-day-checker',
   repository: 'https://github.com/baboopan/cdk-working-day-checker.git',
-  description: 'Check tomorrow is TW\'s working day or not.',
+  description: 'Check today is TW\'s working day or not.',
   defaultReleaseBranch: 'main',
   autoDetectBin: false,
   dependabot: true,
@@ -14,8 +14,11 @@ const project = new AwsCdkTypeScriptApp({
   cdkDependencies: [
     "@aws-cdk/aws-lambda",
     "@aws-cdk/aws-lambda-python",
+    "@aws-cdk/aws-certificatemanager",
     "@aws-cdk/aws-apigatewayv2",
-    "@aws-cdk/aws-apigatewayv2-integrations"
+    "@aws-cdk/aws-apigatewayv2-integrations",
+    "@aws-cdk/aws-route53",
+    "@aws-cdk/aws-route53-targets"
   ],
 
   /* AwsCdkTypeScriptAppOptions */

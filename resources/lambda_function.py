@@ -27,21 +27,23 @@ def lambda_handler(event, context):
     today = datetime.now(tz)
     # print(today)
 
-    tomorrow = today + timedelta(days = 1)
+    # tomorrow = today + timedelta(days = 1)
     # print(tomorrow)
 
-    # day = data.loc[int(today.strftime("%Y%m%d"))]
-    day = data.loc[int(tomorrow.strftime("%Y%m%d"))]
+    # day = data.loc[int(tomorrow.strftime("%Y%m%d"))]
+    day = data.loc[int(today.strftime("%Y%m%d"))]
     
     if day['是否放假'] == 0:
         data = {
-            'result': "明天要上班哦～",
+            # 'result': "明天要上班哦～",
+            'result': "今天要上班哦～",
             'workingDay': True,
             'datetime': today.isoformat()
         }
     elif day['是否放假'] == 2:
         data = {
-            'result': "明天放假囉！",
+            # 'result': "明天放假囉！",
+            'result': "今天放假囉！",
             'workingDay': False,
             'datetime': today.isoformat()
         }
