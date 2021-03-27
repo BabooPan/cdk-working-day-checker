@@ -1,11 +1,12 @@
 import { App, Construct, Stack, StackProps, CfnOutput } from '@aws-cdk/core';
-import { PythonFunction } from "@aws-cdk/aws-lambda-python";
-import { Certificate } from "@aws-cdk/aws-certificatemanager";
-import * as lambda from "@aws-cdk/aws-lambda";
-import * as apigw from "@aws-cdk/aws-apigatewayv2";
-import * as apigwInt from "@aws-cdk/aws-apigatewayv2-integrations";
-import * as route53 from "@aws-cdk/aws-route53";
-import * as targets from "@aws-cdk/aws-route53-targets";
+import { PythonFunction } from '@aws-cdk/aws-lambda-python';
+import { record } from './config'
+import { Certificate } from '@aws-cdk/aws-certificatemanager';
+import * as lambda from '@aws-cdk/aws-lambda';
+import * as apigwv2 from '@aws-cdk/aws-apigatewayv2';
+import * as apigwInt from '@aws-cdk/aws-apigatewayv2-integrations';
+import * as route53 from '@aws-cdk/aws-route53';
+import * as targets from '@aws-cdk/aws-route53-targets';
 
 export class CdkWorkingDayChecker extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -22,15 +23,12 @@ export class CdkWorkingDayChecker extends Stack {
       handler: WorkingDayCheckerFunction,
     });
     
-    // Please modify to yours
-    const [recordName, domainName, zoneId, certArn] = ['', '', '', '']
-    
-    const apiCustomDomain = new apigw.DomainName(this, 'apiCustomDomain', {
-      domainName: recordName + '.' + domainName,
-      certificate: Certificate.fromCertificateArn(this, 'cert', certArn),
+    const apiCustomDomain = new apigwv2.DomainName(this, 'apiCustomDomain', {
+      domainName: record.recordName + '.' + record.domainName,
+      certificate: Certificate.fromCertificateArn(this, 'cert', record.certArn),
     });
     
-    const httpApi = new apigw.HttpApi(this, 'workingDayCheckerApi', {
+    const httpApi = new apigwv2.HttpApi(this, 'workingDayCheckerApi', {
       defaultDomainMapping: {
         domainName: apiCustomDomain
       },
@@ -38,23 +36,24 @@ export class CdkWorkingDayChecker extends Stack {
     
     httpApi.addRoutes({
       path: '/',
-      methods: [ apigw.HttpMethod.GET ],
+      methods: [ apigwv2.HttpMethod.GET ],
       integration: getCheckerIntegration,
     });
 
     const zone = route53.PublicHostedZone.fromHostedZoneAttributes(this, 'HostedZone',{ 
-      zoneName: domainName,
-      hostedZoneId: zoneId,
+      zoneName: record.domainName,
+      hostedZoneId: record.zoneId,
     });
-
+    
+    const [ recordName ] = [ record.recordName ]
     new route53.ARecord(this, 'AliasRecord', {
       zone,
       recordName,
       target: route53.RecordTarget.fromAlias(new targets.ApiGatewayv2Domain(apiCustomDomain)),
     });
-
+    
     new CfnOutput(this, 'apigw-endpoint',{ value: httpApi.apiEndpoint});
-    new CfnOutput(this, 'openapi-endpoint',{ value: ('https://' + recordName + '.' + domainName)});
+    new CfnOutput(this, 'openapi-endpoint',{ value: ('https://' + record.recordName + '.' + record.domainName)});
 
   }
 }

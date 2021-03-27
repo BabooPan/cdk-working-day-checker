@@ -21,7 +21,7 @@
     },
     {
       "name": "aws-cdk",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "build"
     },
     {
@@ -78,47 +78,52 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-apigateway",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-apigatewayv2-integrations",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-apigatewayv2",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-certificatemanager",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda-python",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-route53-targets",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-route53",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.93.0",
+      "version": "^1.94.0",
       "type": "runtime"
     }
   ],

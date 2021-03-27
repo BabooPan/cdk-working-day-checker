@@ -14,7 +14,7 @@
 }
 ```
 
-## Deploy
+## Deploy with CDK
 
 透過 `cdk deploy` 做部署，若在部署的 AWS Account 或是 Region中沒有配置過 [CDK Toolkit](https://docs.aws.amazon.com/zh_tw/cdk/latest/guide/cli.html)，會報錯提示需要執行 `cdk bootstrap aws://012345678901/us-west-2`
 

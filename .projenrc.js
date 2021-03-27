@@ -12,15 +12,19 @@ const project = new AwsCdkTypeScriptApp({
   dependabot: false,
   // jsiiFqn: "projen.AwsCdkTypeScriptApp",
   cdkDependencies: [
-    "@aws-cdk/aws-lambda",
-    "@aws-cdk/aws-lambda-python",
-    "@aws-cdk/aws-certificatemanager",
-    "@aws-cdk/aws-apigatewayv2",
-    "@aws-cdk/aws-apigatewayv2-integrations",
-    "@aws-cdk/aws-route53",
-    "@aws-cdk/aws-route53-targets"
+    '@aws-cdk/aws-lambda',
+    '@aws-cdk/aws-lambda-python',
+    '@aws-cdk/aws-certificatemanager',
+    '@aws-cdk/aws-apigateway',
+    '@aws-cdk/aws-apigatewayv2',
+    '@aws-cdk/aws-apigatewayv2-integrations',
+    '@aws-cdk/aws-route53',
+    '@aws-cdk/aws-route53-targets'
   ],
-
+  gitignore: [
+    'src/config.ts'
+  ],                                                     /* Additional entries to .gitignore. */
+  
   /* AwsCdkTypeScriptAppOptions */
   // appEntrypoint: 'main.ts',                                                 /* The CDK app's entrypoint (relative to the source directory, which is "src" by default). */
   // cdkVersionPinning: false,                                                 /* Use pinned version instead of caret version for CDK. */
@@ -66,7 +70,6 @@ const project = new AwsCdkTypeScriptApp({
   // copyrightOwner: undefined,                                                /* License copyright owner. */
   // copyrightPeriod: undefined,                                               /* The copyright years to put in the LICENSE file. */
   // dependabotOptions: undefined,                                             /* Options for dependabot. */
-  // gitignore: undefined,                                                     /* Additional entries to .gitignore. */
   // jest: true,                                                               /* Setup jest unit tests. */
   // jestOptions: undefined,                                                   /* Jest options. */
   // jsiiReleaseVersion: 'latest',                                             /* Version requirement of `jsii-release` which is used to publish modules to npm. */
