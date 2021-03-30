@@ -1,6 +1,6 @@
+import { record } from './config'
 import { App, Construct, Stack, StackProps, CfnOutput } from '@aws-cdk/core';
 import { PythonFunction } from '@aws-cdk/aws-lambda-python';
-import { record } from './config'
 import { Certificate } from '@aws-cdk/aws-certificatemanager';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as apigwv2 from '@aws-cdk/aws-apigatewayv2';
@@ -13,8 +13,8 @@ export class CdkWorkingDayChecker extends Stack {
     super(scope, id, props);
 
     const WorkingDayCheckerFunction = new PythonFunction(this, 'workingDayCheckerFunction', {
-      entry: './resources/',
-      index: 'lambda_function.py',
+      entry: './lambda-handler/',
+      index: 'index.py',
       handler: 'lambda_handler',
       runtime: lambda.Runtime.PYTHON_3_8
     });
@@ -29,32 +29,39 @@ export class CdkWorkingDayChecker extends Stack {
     });
     
     const httpApi = new apigwv2.HttpApi(this, 'workingDayCheckerApi', {
-      defaultDomainMapping: {
-        domainName: apiCustomDomain
-      },
+      createDefaultStage: false
     });
-    
+
     httpApi.addRoutes({
       path: '/',
       methods: [ apigwv2.HttpMethod.GET ],
-      integration: getCheckerIntegration,
+      integration: getCheckerIntegration
     });
 
-    const zone = route53.PublicHostedZone.fromHostedZoneAttributes(this, 'HostedZone',{ 
+    const apiStage = httpApi.addStage('dev', {
+      stageName: 'dev',
+      autoDeploy: true,
+      domainMapping: {
+        domainName: apiCustomDomain
+      },
+    });
+
+    const hostedZone = route53.PublicHostedZone.fromHostedZoneAttributes(this, 'HostedZone',{ 
       zoneName: record.domainName,
-      hostedZoneId: record.zoneId,
+      hostedZoneId: record.zoneId
     });
     
-    const [ recordName ] = [ record.recordName ]
     new route53.ARecord(this, 'AliasRecord', {
-      zone,
-      recordName,
+      zone: hostedZone,
+      recordName: record.recordName,
       target: route53.RecordTarget.fromAlias(new targets.ApiGatewayv2Domain(apiCustomDomain)),
     });
-    
+
+    const stageCfnResource = apiStage.node.defaultChild as apigwv2.CfnStage;
+    stageCfnResource.addPropertyOverride('DefaultRouteSettings', { ThrottlingRateLimit: 3 });
+
     new CfnOutput(this, 'apigw-endpoint',{ value: httpApi.apiEndpoint});
     new CfnOutput(this, 'openapi-endpoint',{ value: ('https://' + record.recordName + '.' + record.domainName)});
-
   }
 }
 

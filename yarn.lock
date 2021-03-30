@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/assert@^1.94.0":
+"@aws-cdk/assert@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-1.95.1.tgz#15e801e41705a3eb15abdbaa3bdab86e302e9861"
   integrity sha512-lnW0xs8SXCF+r1sVWcBxhgMEVNP/s0Bhp8WJSlaBC823RGknZ9zSuehtZrTMdjh8AncDa3klvwdCvp/za1WQ2A==
@@ -22,7 +22,7 @@
     "@aws-cdk/cx-api" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-apigateway@1.95.1", "@aws-cdk/aws-apigateway@^1.94.0":
+"@aws-cdk/aws-apigateway@1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigateway/-/aws-apigateway-1.95.1.tgz#8b608874b37afb9633f6d3f29620a8ad43bc0d30"
   integrity sha512-ZRWnVPkJ4PcBXBp+B1V9WZMvZGjSZy4OIhLEkYiXdaQrAbTacBTeeTfPK/cCLBWTU7IGs1vBSJ63p1uwbX3pCA==
@@ -41,7 +41,7 @@
     "@aws-cdk/cx-api" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-apigatewayv2-integrations@^1.94.0":
+"@aws-cdk/aws-apigatewayv2-integrations@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations/-/aws-apigatewayv2-integrations-1.95.1.tgz#1087e02aa320e1ff9d5f8b0251a06a859df42f95"
   integrity sha512-oRSZlh1P07ncvxZMj28H2ZaqPEI3uueqyf51p/pVrYtqoaGkhzq2G7LU1s9YmpEsTP7vKtu7+akRaJibbOLafQ==
@@ -55,7 +55,7 @@
     "@aws-cdk/core" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-apigatewayv2@1.95.1", "@aws-cdk/aws-apigatewayv2@^1.94.0":
+"@aws-cdk/aws-apigatewayv2@1.95.1", "@aws-cdk/aws-apigatewayv2@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2/-/aws-apigatewayv2-1.95.1.tgz#c410c114edfc53d37707658702db266d112f82c9"
   integrity sha512-Etiq5kR9yP8S4GaZ7dowC1Y13lPce2nVbxUHHvZ5nOB3rN5xuyjDRY4zwAiwJb5jCNByxm7YgRp/s5IVhuAcSA==
@@ -87,7 +87,7 @@
     "@aws-cdk/core" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-certificatemanager@1.95.1", "@aws-cdk/aws-certificatemanager@^1.94.0":
+"@aws-cdk/aws-certificatemanager@1.95.1", "@aws-cdk/aws-certificatemanager@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-certificatemanager/-/aws-certificatemanager-1.95.1.tgz#a9ef5e9aadda6a714bce3736eaaf7e0e8f52a9ec"
   integrity sha512-pb83OS6BXVt47SvgvMhs+crv/5VnFcFc03MjThq4JzLYcJZRa6ITjY1zMF9VtwQJaUKuezMeRurV7gLJ0o6rGg==
@@ -276,7 +276,7 @@
     "@aws-cdk/cx-api" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-lambda-python@^1.94.0":
+"@aws-cdk/aws-lambda-python@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-lambda-python/-/aws-lambda-python-1.95.1.tgz#d9ae59b4901df4169c26f646210f4a7c6e79b34a"
   integrity sha512-JmGSCgpGDg3vKBgAkb+O6WK0+NJAd0WcwrAAz3hCeHR8NeC2fQ5QKzkmLoH8rD4K57jcnJhTZpdWogbTkHDWGA==
@@ -286,7 +286,7 @@
     "@aws-cdk/core" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-lambda@1.95.1", "@aws-cdk/aws-lambda@^1.94.0":
+"@aws-cdk/aws-lambda@1.95.1", "@aws-cdk/aws-lambda@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-lambda/-/aws-lambda-1.95.1.tgz#9a4b16c462941d165f315b04850099451ec7269d"
   integrity sha512-/FoFx+oN1AFTCdchfDlwBU2nADY1J2dguRtsjcj1jemehoD44ybj3OXA55lTfaAyQYSkr5MkJBmztVpA+yerSg==
@@ -322,7 +322,7 @@
     "@aws-cdk/core" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-route53-targets@^1.94.0":
+"@aws-cdk/aws-route53-targets@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-route53-targets/-/aws-route53-targets-1.95.1.tgz#93e82a2f3b014dad1040e87bffe0c7c72991d98f"
   integrity sha512-VfwTWEYHZ4JXJ4O7Rocw2r3U2rou+pfoUxvdsefrqEw2O0zVdKaBNvkb3eqII8HSeYL7D8lqq+vNggZM4s8bvA==
@@ -342,7 +342,7 @@
     "@aws-cdk/region-info" "1.95.1"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-route53@1.95.1", "@aws-cdk/aws-route53@^1.94.0":
+"@aws-cdk/aws-route53@1.95.1", "@aws-cdk/aws-route53@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-route53/-/aws-route53-1.95.1.tgz#9456b469cd6a2a2cbf67b58fd28a9f068376acfe"
   integrity sha512-+fNWD4TvJUm9tVeaLhS/FLfHxmk8Sou6J1IL2ZvYIWR/E7KnxKCm1sXSjMvrzDHKzaXeHxjauj6wrdi4nqiovg==
@@ -461,7 +461,7 @@
     string-width "^4.2.2"
     table "^6.0.7"
 
-"@aws-cdk/core@1.95.1", "@aws-cdk/core@^1.94.0":
+"@aws-cdk/core@1.95.1", "@aws-cdk/core@^1.95.1":
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.95.1.tgz#5ef20be2ce95c42b41dd458596c64784dfc2ccbb"
   integrity sha512-YO7j/Ev/5qpJv9mWX0mWTY7SiWqhum3S7ygJNNpkaThDplegLCa71IBbJlR6uK5vmkpJ30oir5XuO57gyQ/ORg==
@@ -1538,7 +1538,7 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-cdk@^1.94.0:
+aws-cdk@^1.95.1:
   version "1.95.1"
   resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-1.95.1.tgz#90780df16cf69e27a982dcb9cfb64c72f756e1d3"
   integrity sha512-xQZQgBuK7TXRnlJo7TEWBDak42gtg1sCgJHYtcJ0VL+W9vlEBqaosEItcoSPPzXq4MzXZn39u45Rrv+gT6f5iw==

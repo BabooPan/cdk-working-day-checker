@@ -6,7 +6,8 @@
 
 回覆 ***今天*** 為人事行政局發布的工作日 Working Day，或是可以放爛耍廢的喪屍日 Walking Dead
 
-```json
+```bash
+$ curl https://workingday.baboopan.net
 {
     "result": "今天要上班哦～", 
     "workingDay": true, 
