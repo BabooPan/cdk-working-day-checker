@@ -9,14 +9,15 @@ from datetime import timedelta
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
+
 def lambda_handler(event, context):
 
     logger.info(f'event = {event}')
 
     data = pd.read_csv(
-        './110中華民國政府行政機關辦公日曆表.csv', 
-        index_col = '西元日期',
-        encoding = 'big5'
+        './110中華民國政府行政機關辦公日曆表.csv',
+        index_col='西元日期',
+        encoding='big5'
     )
 
     # print(data.columns)
@@ -32,7 +33,7 @@ def lambda_handler(event, context):
 
     # day = data.loc[int(tomorrow.strftime("%Y%m%d"))]
     day = data.loc[int(today.strftime("%Y%m%d"))]
-    
+
     if day['是否放假'] == 0:
         data = {
             # 'result': "明天要上班哦～",
@@ -63,7 +64,7 @@ def lambda_handler(event, context):
             'Access-Control-Allow-Origin': '*'
         }
     }
-    
+
     # result = json.dumps(data)
 
     return result
