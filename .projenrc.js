@@ -3,7 +3,7 @@ const { AwsCdkTypeScriptApp } = require('projen');
 const project = new AwsCdkTypeScriptApp({
   authorEmail: 'lpig0818@gmail.com',
   authorName: 'Baboo Pan',
-  cdkVersion: '1.125.0',
+  cdkVersion: '1.127.0',
   name: 'cdk-working-day-checker',
   repository: 'https://github.com/baboopan/cdk-working-day-checker.git',
   description: 'Check today is TW\'s working day or not.',

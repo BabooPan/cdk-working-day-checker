@@ -19,7 +19,7 @@
     },
     {
       "name": "aws-cdk",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "build"
     },
     {
@@ -52,8 +52,18 @@
       "type": "build"
     },
     {
+      "name": "npm-check-updates",
+      "version": "^11",
+      "type": "build"
+    },
+    {
+      "name": "npm-check-updates",
+      "version": "^11",
+      "type": "build"
+    },
+    {
       "name": "projen",
-      "version": "^0.17.17",
+      "version": "^0.17.95",
       "type": "build"
     },
     {
@@ -75,47 +85,47 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-apigatewayv2-integrations",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-apigatewayv2",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-certificatemanager",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda-python",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-route53-targets",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-route53",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.125.0",
+      "version": "^1.127.0",
       "type": "runtime"
     }
   ],

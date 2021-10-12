@@ -12,6 +12,8 @@
 .nyc_output
 .parcel-cache/
 .yarn-integrity
+/.changelog.tmp.md
+/.version.tmp.json
 /coverage
 /dist
 /lib
@@ -32,8 +34,10 @@ src/config.ts
 yarn-debug.log*
 yarn-error.log*
 !/.eslintrc.json
+!/.gitattributes
 !/.github/pull_request_template.md
 !/.github/workflows/build.yml
+!/.github/workflows/upgrade-dependencies.yml
 !/.mergify.yml
 !/.npmignore
 !/.projen/deps.json
@@ -48,4 +52,3 @@ yarn-error.log*
 !/tsconfig.eslint.json
 !/tsconfig.jest.json
 !/tsconfig.json
-!version.json
