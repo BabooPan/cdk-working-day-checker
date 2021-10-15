@@ -32,24 +32,24 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/jest": "^26.0.20",
+    "@types/jest": "^26.0.24",
     "@types/node": "^10.17.0",
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "aws-cdk": "^1.127.0",
-    "eslint": "^7.20.0",
-    "eslint-import-resolver-node": "^0.3.4",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint": "^7.32.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
     "jest": "^26.6.3",
     "jest-junit": "^12",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
     "projen": "^0.17.95",
     "standard-version": "^9",
-    "ts-jest": "^26.5.1",
+    "ts-jest": "^26.5.6",
     "ts-node": "^9.1.1",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.10"
   },
   "dependencies": {
     "@aws-cdk/assert": "^1.127.0",
