@@ -32,9 +32,11 @@ export class CdkWorkingDayChecker extends Stack {
       // architectures: [lambda.Architecture.ARM_64]
     });
 
-    const getCheckerIntegration = new apigwInt.LambdaProxyIntegration({
-      handler: WorkingDayCheckerFunction,
-    });
+    // const getCheckerIntegration = new apigwInt.LambdaProxyIntegration({
+    const getCheckerIntegration = new apigwInt.HttpLambdaIntegration(
+      'checkerIntegration',
+      WorkingDayCheckerFunction
+    );
     
     const apiCustomDomain = new apigwv2.DomainName(this, 'apiCustomDomain', {
       domainName: record.recordName + '.' + record.domainName,

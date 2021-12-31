@@ -8,6 +8,7 @@
 *.tsbuildinfo
 .cache
 .cdk.staging/
+.dccache
 .eslintcache
 .nyc_output
 .parcel-cache/

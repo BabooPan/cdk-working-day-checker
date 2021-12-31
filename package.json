@@ -36,7 +36,7 @@
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
-    "aws-cdk": "^1.127.0",
+    "aws-cdk": "^1.137.0",
     "eslint": "^7.32.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.5.0",
@@ -52,15 +52,15 @@
     "typescript": "^3.9.10"
   },
   "dependencies": {
-    "@aws-cdk/assert": "^1.127.0",
-    "@aws-cdk/aws-apigatewayv2": "^1.127.0",
-    "@aws-cdk/aws-apigatewayv2-integrations": "^1.127.0",
-    "@aws-cdk/aws-certificatemanager": "^1.127.0",
-    "@aws-cdk/aws-lambda": "^1.127.0",
-    "@aws-cdk/aws-lambda-python": "^1.127.0",
-    "@aws-cdk/aws-route53": "^1.127.0",
-    "@aws-cdk/aws-route53-targets": "^1.127.0",
-    "@aws-cdk/core": "^1.127.0"
+    "@aws-cdk/assert": "^1.137.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.137.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.137.0",
+    "@aws-cdk/aws-certificatemanager": "^1.137.0",
+    "@aws-cdk/aws-lambda": "^1.137.0",
+    "@aws-cdk/aws-lambda-python": "^1.137.0",
+    "@aws-cdk/aws-route53": "^1.137.0",
+    "@aws-cdk/aws-route53-targets": "^1.137.0",
+    "@aws-cdk/core": "^1.137.0"
   },
   "bundledDependencies": [],
   "license": "Apache-2.0",
