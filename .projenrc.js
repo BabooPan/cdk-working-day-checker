@@ -1,30 +1,30 @@
-const { AwsCdkTypeScriptApp } = require('projen');
+const { AwsCdkTypeScriptApp } = require("projen");
 
 const project = new AwsCdkTypeScriptApp({
-  authorEmail: 'lpig0818@gmail.com',
-  authorName: 'Baboo Pan',
-  cdkVersion: '1.137.0',
-  name: 'cdk-working-day-checker',
-  repository: 'https://github.com/baboopan/cdk-working-day-checker.git',
-  description: 'Check today is TW\'s working day or not.',
-  defaultReleaseBranch: 'main',
+  authorEmail: "lpig0818@gmail.com",
+  authorName: "Baboo Pan",
+  cdkVersion: "1.137.0",
+  name: "cdk-working-day-checker",
+  repository: "https://github.com/baboopan/cdk-working-day-checker.git",
+  description: "Check today is TW's working day or not.",
+  defaultReleaseBranch: "main",
   autoDetectBin: false,
   dependabot: false,
   // jsiiFqn: "projen.AwsCdkTypeScriptApp",
   cdkDependencies: [
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/aws-lambda-python',
-    '@aws-cdk/aws-certificatemanager',
-    '@aws-cdk/aws-apigatewayv2',
-    '@aws-cdk/aws-apigatewayv2-integrations',
-    '@aws-cdk/aws-route53',
-    '@aws-cdk/aws-route53-targets'
+    "@aws-cdk/aws-lambda",
+    "@aws-cdk/aws-lambda-python",
+    "@aws-cdk/aws-certificatemanager",
+    "@aws-cdk/aws-apigatewayv2",
+    "@aws-cdk/aws-apigatewayv2-integrations",
+    "@aws-cdk/aws-route53",
+    "@aws-cdk/aws-route53-targets",
   ],
   gitignore: [
-    'src/config.ts',
-    '.dccache'
-  ],                                                     /* Additional entries to .gitignore. */
-  
+    "src/config.ts",
+    ".dccache",
+  ] /* Additional entries to .gitignore. */,
+
   /* AwsCdkTypeScriptAppOptions */
   // appEntrypoint: 'main.ts',                                                 /* The CDK app's entrypoint (relative to the source directory, which is "src" by default). */
   // cdkVersionPinning: false,                                                 /* Use pinned version instead of caret version for CDK. */

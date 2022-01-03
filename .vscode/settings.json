@@ -1,0 +1,84 @@
+{
+    "files.encoding": "utf8",
+    "files.trimTrailingWhitespace": true, // 儲存的時候，會幫你自動過濾多餘的空格
+    "files.autoSave": "onFocusChange", // 是否自動儲存檔案
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": ["--disable=C0111"],
+    "python.languageServer": "Pylance",
+    "python.autoComplete.extraPaths": [
+        "~/.local/lib/Google/google_appengine",
+        "~/.local/lib/Google/google_appengine/lib/flask-0.12"
+    ],
+    "[python]": { // 加入這幾行
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": true,
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[JSON]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[YAML]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
+    "markdownlint.config": {
+        "line-length": false,
+        "MD007": {
+            "indent": 4
+        },
+        "MD034": false,
+        "no-inline-html": {
+            "allowed_elements": [
+                "img",
+                "p",
+                "br",
+                "span"
+            ]
+        }
+    },
+    "workbench.colorTheme": "Monokai",
+    "terminal.integrated.fontSize": 14,
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ]
+}

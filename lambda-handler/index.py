@@ -1,12 +1,11 @@
-import pandas as pd
-import pytz
+# import os
+from datetime import datetime
+# from datetime import timedelta
 import json
 import logging
-import os
-
+import pytz
+import pandas as pd
 from pycountry import countries
-from datetime import datetime
-from datetime import timedelta
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -14,7 +13,7 @@ logger.setLevel(logging.INFO)
 
 def lambda_handler(event, context):
 
-    logger.info(f'event = {event}')
+    logger.info('event = %s', event)
 
     # get the region from queryStringParameters, default set as Taiwan
     if "queryStringParameters" in event.keys() & "region" in event["queryStringParameters"].keys():
@@ -40,9 +39,9 @@ def lambda_handler(event, context):
     # print(data.columns)
     # print(data.index)
 
-    tz = pytz.timezone('Asia/Taipei')
+    timezone = pytz.timezone('Asia/Taipei')
 
-    today = datetime.now(tz)
+    today = datetime.now(timezone)
     # print(today)
 
     # tomorrow = today + timedelta(days = 1)
@@ -73,7 +72,7 @@ def lambda_handler(event, context):
             'datetime': today.isoformat()
         }
 
-    logger.info(f'data = {data}')
+    logger.info('data = %s', data)
 
     result = {
         'statusCode': 200,
