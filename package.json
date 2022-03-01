@@ -52,15 +52,15 @@
     "typescript": "^3.9.10"
   },
   "dependencies": {
-    "@aws-cdk/assert": "^1.137.0",
+    "@aws-cdk/assert": "^1.143.0",
     "@aws-cdk/aws-apigatewayv2": "^1.137.0",
     "@aws-cdk/aws-apigatewayv2-integrations": "^1.137.0",
-    "@aws-cdk/aws-certificatemanager": "^1.137.0",
-    "@aws-cdk/aws-lambda": "^1.137.0",
+    "@aws-cdk/aws-certificatemanager": "^1.143.0",
+    "@aws-cdk/aws-lambda": "^1.143.0",
     "@aws-cdk/aws-lambda-python": "^1.137.0",
-    "@aws-cdk/aws-route53": "^1.137.0",
-    "@aws-cdk/aws-route53-targets": "^1.137.0",
-    "@aws-cdk/core": "^1.137.0"
+    "@aws-cdk/aws-route53": "^1.143.0",
+    "@aws-cdk/aws-route53-targets": "^1.143.0",
+    "@aws-cdk/core": "^1.143.0"
   },
   "bundledDependencies": [],
   "license": "Apache-2.0",
