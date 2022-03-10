@@ -54,7 +54,7 @@
   "dependencies": {
     "@aws-cdk/assert": "^1.137.0",
     "@aws-cdk/aws-apigatewayv2": "^1.137.0",
-    "@aws-cdk/aws-apigatewayv2-integrations": "^1.137.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.144.0",
     "@aws-cdk/aws-certificatemanager": "^1.137.0",
     "@aws-cdk/aws-lambda": "^1.137.0",
     "@aws-cdk/aws-lambda-python": "^1.137.0",
