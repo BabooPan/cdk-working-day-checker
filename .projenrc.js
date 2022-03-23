@@ -44,7 +44,6 @@ const project = new awscdk.AwsCdkTypeScriptApp({
     'esbuild',
   ],
   gitignore: [
-    'src/config.ts',
     '.vscode',
     '.dccache',
     'cdk.out',
