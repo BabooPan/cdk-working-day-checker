@@ -14,7 +14,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   stability: 'experimental',
   autoDetectBin: false,
   dependabot: false,
-  cdkVersion: '1.148.0',
+  cdkVersion: '1.150.0',
   // Default release the main branch with major version 1.
   majorVersion: 1,
   defaultReleaseBranch: 'master',
@@ -44,15 +44,12 @@ const project = new awscdk.AwsCdkTypeScriptApp({
     'esbuild',
   ],
   gitignore: [
-    '.vscode',
     '.dccache',
     'cdk.out',
     'cdk.context.json',
     'yarn-error.log',
     'coverage',
     'venv',
-    'tsconfig.json',
-    'tsconfig.dev.json'
   ],
 });
 
