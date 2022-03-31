@@ -13,7 +13,7 @@ export class CdkWorkingDayChecker extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    /** 
+    /**
      * Lack support for custom modules in Python
      */
     // const WorkingDayCheckerFunction = new lambda.Function(this, 'workingDayCheckerFunction', {
@@ -22,7 +22,7 @@ export class CdkWorkingDayChecker extends Stack {
     //   handler: 'index.lambda_handler',
     //   architectures: [lambda.Architecture.ARM_64]
     // });
-    
+
     const WorkingDayCheckerFunction = new PythonFunction(this, 'workingDayCheckerFunction', {
       entry: './lambda-handler/',
       index: 'index.py',
@@ -37,12 +37,12 @@ export class CdkWorkingDayChecker extends Stack {
       'checkerIntegration',
       WorkingDayCheckerFunction
     );
-    
+
     const apiCustomDomain = new apigwv2.DomainName(this, 'apiCustomDomain', {
       domainName: record.recordName + '.' + record.domainName,
       certificate: Certificate.fromCertificateArn(this, 'cert', record.certArn),
     });
-    
+
     const httpApi = new apigwv2.HttpApi(this, 'workingDayCheckerApi', {
       createDefaultStage: false
     });
@@ -61,15 +61,20 @@ export class CdkWorkingDayChecker extends Stack {
       },
     });
 
-    const hostedZone = route53.PublicHostedZone.fromHostedZoneAttributes(this, 'HostedZone',{ 
+    const hostedZone = route53.PublicHostedZone.fromHostedZoneAttributes(this, 'HostedZone',{
       zoneName: record.domainName,
       hostedZoneId: record.zoneId
     });
-    
+
     new route53.ARecord(this, 'AliasRecord', {
       zone: hostedZone,
       recordName: record.recordName,
-      target: route53.RecordTarget.fromAlias(new targets.ApiGatewayv2DomainProperties(apiCustomDomain.regionalDomainName, apiCustomDomain.regionalHostedZoneId))
+      target: route53.RecordTarget.fromAlias(
+        new targets.ApiGatewayv2DomainProperties(
+          apiCustomDomain.regionalDomainName,
+          apiCustomDomain.regionalHostedZoneId
+          )
+        )
     });
 
     const stageCfnResource = apiStage.node.defaultChild as apigwv2.CfnStage;
