@@ -1,6 +1,6 @@
 import '@aws-cdk/assert/jest';
-import { App } from '@aws-cdk/core';
 import { Template } from '@aws-cdk/assertions';
+import { App } from '@aws-cdk/core';
 import { CdkWorkingDayChecker } from '../src/main';
 
 test('Snapshot', () => {

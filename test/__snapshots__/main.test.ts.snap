@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+Object {
+  "Outputs": Object {
+    "apigwendpoint": Object {
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            Object {
+              "Fn::GetAtt": Array [
+                "workingDayCheckerApiE19AE4A3",
+                "ApiEndpoint",
+              ],
+            },
+            "/dev/",
+          ],
+        ],
+      },
+    },
+    "openapiendpoint": Object {
+      "Value": "https://workingday.baboopan.net",
+    },
+  },
+  "Parameters": Object {
+    "AssetParametersa912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019ArtifactHash13EF2D65": Object {
+      "Description": "Artifact hash for asset \\"a912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019\\"",
+      "Type": "String",
+    },
+    "AssetParametersa912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019S3Bucket1D1595C2": Object {
+      "Description": "S3 bucket for asset \\"a912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019\\"",
+      "Type": "String",
+    },
+    "AssetParametersa912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019S3VersionKeyA1A18AB3": Object {
+      "Description": "S3 key for asset version \\"a912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019\\"",
+      "Type": "String",
+    },
+  },
+  "Resources": Object {
+    "AliasRecord851000D2": Object {
+      "Properties": Object {
+        "AliasTarget": Object {
+          "DNSName": Object {
+            "Fn::GetAtt": Array [
+              "apiCustomDomain9799E20D",
+              "RegionalDomainName",
+            ],
+          },
+          "HostedZoneId": Object {
+            "Fn::GetAtt": Array [
+              "apiCustomDomain9799E20D",
+              "RegionalHostedZoneId",
+            ],
+          },
+        },
+        "HostedZoneId": "Z00292561235P7FTLUPZ9",
+        "Name": "workingday.baboopan.net.",
+        "Type": "A",
+      },
+      "Type": "AWS::Route53::RecordSet",
+    },
+    "apiCustomDomain9799E20D": Object {
+      "Properties": Object {
+        "DomainName": "workingday.baboopan.net",
+        "DomainNameConfigurations": Array [
+          Object {
+            "CertificateArn": "arn:aws:acm:us-west-2:471856162574:certificate/63d81b75-628d-4ee7-8696-46f619e8c77e",
+            "EndpointType": "REGIONAL",
+          },
+        ],
+      },
+      "Type": "AWS::ApiGatewayV2::DomainName",
+    },
+    "workingDayCheckerApiE19AE4A3": Object {
+      "Properties": Object {
+        "Name": "workingDayCheckerApi",
+        "ProtocolType": "HTTP",
+      },
+      "Type": "AWS::ApiGatewayV2::Api",
+    },
+    "workingDayCheckerApiGET37B44C5E": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "workingDayCheckerApiE19AE4A3",
+        },
+        "AuthorizationType": "NONE",
+        "RouteKey": "GET /",
+        "Target": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "integrations/",
+              Object {
+                "Ref": "workingDayCheckerApiGETcheckerIntegration62A9726F",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "workingDayCheckerApiGETcheckerIntegration62A9726F": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "workingDayCheckerApiE19AE4A3",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": Object {
+          "Fn::GetAtt": Array [
+            "workingDayCheckerFunction6B548FB9",
+            "Arn",
+          ],
+        },
+        "PayloadFormatVersion": "2.0",
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "workingDayCheckerApiGETcheckerIntegrationPermissionB3DD5A74": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "workingDayCheckerFunction6B548FB9",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "workingDayCheckerApiE19AE4A3",
+              },
+              "/*/*/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "workingDayCheckerApidev8CC58CB6": Object {
+      "DependsOn": Array [
+        "apiCustomDomain9799E20D",
+      ],
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "workingDayCheckerApiE19AE4A3",
+        },
+        "AutoDeploy": true,
+        "DefaultRouteSettings": Object {
+          "ThrottlingRateLimit": 5,
+        },
+        "StageName": "dev",
+      },
+      "Type": "AWS::ApiGatewayV2::Stage",
+    },
+    "workingDayCheckerApidevtestapiCustomDomainundefinedE701E8C0": Object {
+      "DependsOn": Array [
+        "apiCustomDomain9799E20D",
+        "workingDayCheckerApidev8CC58CB6",
+      ],
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "workingDayCheckerApiE19AE4A3",
+        },
+        "DomainName": Object {
+          "Ref": "apiCustomDomain9799E20D",
+        },
+        "Stage": "dev",
+      },
+      "Type": "AWS::ApiGatewayV2::ApiMapping",
+    },
+    "workingDayCheckerFunction6B548FB9": Object {
+      "DependsOn": Array [
+        "workingDayCheckerFunctionServiceRoleEDDC65F0",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParametersa912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019S3Bucket1D1595C2",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParametersa912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019S3VersionKeyA1A18AB3",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParametersa912df6e9765183b1a23c4116e0fded2a5c1da0afe66849142ecd09f4afa2019S3VersionKeyA1A18AB3",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Handler": "index.lambda_handler",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "workingDayCheckerFunctionServiceRoleEDDC65F0",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.9",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "workingDayCheckerFunctionServiceRoleEDDC65F0": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+  },
+}
+`;

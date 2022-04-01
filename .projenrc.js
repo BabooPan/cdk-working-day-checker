@@ -25,7 +25,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
     '@aws-cdk/aws-apigatewayv2',
     '@aws-cdk/aws-apigatewayv2-integrations',
     '@aws-cdk/aws-route53',
-    '@aws-cdk/aws-route53-targets'
+    '@aws-cdk/aws-route53-targets',
   ],
   depsUpgradeOptions: {
     ignoreProjen: false,

@@ -1929,9 +1929,9 @@ camelcase@^6.0.0, camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001317:
-  version "1.0.30001322"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001322.tgz#2e4c09d11e1e8f852767dab287069a8d0c29d623"
-  integrity sha512-neRmrmIrCGuMnxGSoh+x7zYtQFFgnSY2jaomjU56sCkTA6JINqQrxutF459JpWcWRajvoyn95sOXq4Pqrnyjew==
+  version "1.0.30001323"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001323.tgz#a451ff80dec7033016843f532efda18f02eec011"
+  integrity sha512-e4BF2RlCVELKx8+RmklSEIVub1TWrmdhvA5kEUueummz1XyySW0DVk+3x9HyhU9MuWTa2BhqLgEuEmUwASAdCA==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -2136,9 +2136,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^3.2.27, constructs@^3.3.69:
-  version "3.3.253"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.253.tgz#6f849901a035faddb2d9e187f4cfe337b5722870"
-  integrity sha512-GUdGIi27TtyQ4yvnodOkwyJpbNjnSAudbE3keexrDCeggP/7ZKjANXBH3FLPsca/5tEggK/iJDQdAI6pZ+PHMw==
+  version "3.3.255"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.255.tgz#21262a3cf28245ff9a980c2356f4ae7d97f4aba5"
+  integrity sha512-ELeBzcm30yfTbTgfG+U1UbuypicPL6OC3THCWbJGLNeqnnAbqZU5ALgbFaIvYrIE11CaErFBKMPM2exOQlvhhQ==
 
 conventional-changelog-config-spec@^2.1.0:
   version "2.1.0"
@@ -2386,9 +2386,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.84:
-  version "1.4.100"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.100.tgz#da82de8a19a47ea3dcdf141dde85355942fbc4e7"
-  integrity sha512-pNrSE2naf8fizl6/Uxq8UbKb8hU9EiYW4OzCYswosXoLV5NTMOUVKECNzDaHiUubsPq/kAckOzZd7zd8S8CHVw==
+  version "1.4.103"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.103.tgz#abfe376a4d70fa1e1b4b353b95df5d6dfd05da3a"
+  integrity sha512-c/uKWR1Z/W30Wy/sx3dkZoj4BijbXX85QKWu9jJfjho3LBAXNEGAEW3oWiGb+dotA6C6BzCTxL2/aLes7jlUeg==
 
 emittery@^0.7.1:
   version "0.7.2"
@@ -4479,9 +4479,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 lru-cache@^7.3.1, lru-cache@^7.5.1, lru-cache@^7.7.1:
-  version "7.7.2"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.7.2.tgz#9a31f924b96e0e238c1f981bf3fcc2563aafb5f0"
-  integrity sha512-WkdIOIF7HkfVHXxKLjhH6lyAxSFoSO5NZpZS9cH8Oe5rAI2ZDrVmIweDAZUHqIhl0zasQUprVVR8uv2yggYYvw==
+  version "7.7.3"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.7.3.tgz#98cd19eef89ce6a4a3c4502c17c833888677c252"
+  integrity sha512-WY9wjJNQt9+PZilnLbuFKM+SwDull9+6IAguOrarOMoOHTcJ9GnXSO11+Gw6c7xtDkBkthR57OZMtZKYr+1CEw==
 
 make-dir@^3.0.0:
   version "3.1.0"
@@ -5289,10 +5289,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.54.1:
-  version "0.54.1"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.54.1.tgz#c231e34b44c1bc27f694e9fc2d7572dc8efc1ccc"
-  integrity sha512-xIbfzGeuUKMtTNU5DHg5aMFpdwiBca7O53e6IYtj2oEMOoMKz74TrpegXq2Plez9pOwlJQqOUh8WiDPvzVSbtQ==
+projen@^0.54.3:
+  version "0.54.3"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.54.3.tgz#787d024cf3890717e6eaa66142c0a612a6109c76"
+  integrity sha512-fnJojY/Xd+NINNUvkMyY9CohEX7aDNFOYKjJh9PjwC2JAcaXPAHkN1IaqhTnP4B24h2b9WWTJcVxhESwxdSPPg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"

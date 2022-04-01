@@ -1,12 +1,12 @@
-import { record } from './config'
-import { App, Construct, Stack, StackProps, CfnOutput } from '@aws-cdk/core';
-import { PythonFunction } from '@aws-cdk/aws-lambda-python';
-import { Certificate } from '@aws-cdk/aws-certificatemanager';
-import * as lambda from '@aws-cdk/aws-lambda';
 import * as apigwv2 from '@aws-cdk/aws-apigatewayv2';
 import * as apigwInt from '@aws-cdk/aws-apigatewayv2-integrations';
+import { Certificate } from '@aws-cdk/aws-certificatemanager';
+import * as lambda from '@aws-cdk/aws-lambda';
+import { PythonFunction } from '@aws-cdk/aws-lambda-python';
 import * as route53 from '@aws-cdk/aws-route53';
 import * as targets from '@aws-cdk/aws-route53-targets';
+import { App, Construct, Stack, StackProps, CfnOutput } from '@aws-cdk/core';
+import { record } from './config';
 // import * as path from 'path';
 
 export class CdkWorkingDayChecker extends Stack {
@@ -35,7 +35,7 @@ export class CdkWorkingDayChecker extends Stack {
     // const getCheckerIntegration = new apigwInt.LambdaProxyIntegration({
     const getCheckerIntegration = new apigwInt.HttpLambdaIntegration(
       'checkerIntegration',
-      WorkingDayCheckerFunction
+      WorkingDayCheckerFunction,
     );
 
     const apiCustomDomain = new apigwv2.DomainName(this, 'apiCustomDomain', {
@@ -44,26 +44,26 @@ export class CdkWorkingDayChecker extends Stack {
     });
 
     const httpApi = new apigwv2.HttpApi(this, 'workingDayCheckerApi', {
-      createDefaultStage: false
+      createDefaultStage: false,
     });
 
     httpApi.addRoutes({
       path: '/',
-      methods: [ apigwv2.HttpMethod.GET ],
-      integration: getCheckerIntegration
+      methods: [apigwv2.HttpMethod.GET],
+      integration: getCheckerIntegration,
     });
 
     const apiStage = httpApi.addStage('dev', {
       stageName: 'dev',
       autoDeploy: true,
       domainMapping: {
-        domainName: apiCustomDomain
+        domainName: apiCustomDomain,
       },
     });
 
-    const hostedZone = route53.PublicHostedZone.fromHostedZoneAttributes(this, 'HostedZone',{
+    const hostedZone = route53.PublicHostedZone.fromHostedZoneAttributes(this, 'HostedZone', {
       zoneName: record.domainName,
-      hostedZoneId: record.zoneId
+      hostedZoneId: record.zoneId,
     });
 
     new route53.ARecord(this, 'AliasRecord', {
@@ -72,16 +72,16 @@ export class CdkWorkingDayChecker extends Stack {
       target: route53.RecordTarget.fromAlias(
         new targets.ApiGatewayv2DomainProperties(
           apiCustomDomain.regionalDomainName,
-          apiCustomDomain.regionalHostedZoneId
-          )
-        )
+          apiCustomDomain.regionalHostedZoneId,
+        ),
+      ),
     });
 
     const stageCfnResource = apiStage.node.defaultChild as apigwv2.CfnStage;
     stageCfnResource.addPropertyOverride('DefaultRouteSettings', { ThrottlingRateLimit: 5 });
 
-    new CfnOutput(this, 'apigw-endpoint',{ value: httpApi.apiEndpoint + '/dev/'});
-    new CfnOutput(this, 'openapi-endpoint',{ value: ('https://' + record.recordName + '.' + record.domainName)});
+    new CfnOutput(this, 'apigw-endpoint', { value: httpApi.apiEndpoint + '/dev/' });
+    new CfnOutput(this, 'openapi-endpoint', { value: ('https://' + record.recordName + '.' + record.domainName) });
   }
 }
 
