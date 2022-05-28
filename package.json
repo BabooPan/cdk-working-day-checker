@@ -42,7 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk": "^1.150.0",
-    "esbuild": "^0.14.39",
+    "esbuild": "^0.14.41",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -51,7 +51,7 @@
     "jest-junit": "^13",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
-    "projen": "^0.56.34",
+    "projen": "^0.56.36",
     "ts-jest": "^27",
     "ts-node": "^9",
     "typescript": "^3.9.10"
