@@ -23,7 +23,6 @@
     "synth": "npx projen synth",
     "synth:silent": "npx projen synth:silent",
     "test": "npx projen test",
-    "test:update": "npx projen test:update",
     "test:watch": "npx projen test:watch",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
@@ -51,7 +50,7 @@
     "jest-junit": "^13",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^15",
-    "projen": "^0.62.26",
+    "projen": "^0.63.1",
     "ts-jest": "^27",
     "ts-node": "^9",
     "typescript": "^3.9.10"
