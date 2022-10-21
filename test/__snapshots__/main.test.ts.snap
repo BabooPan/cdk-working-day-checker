@@ -24,16 +24,16 @@ Object {
     },
   },
   "Parameters": Object {
-    "AssetParameters64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642ArtifactHash3E8678F3": Object {
-      "Description": "Artifact hash for asset \\"64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642\\"",
+    "AssetParameterse514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6bArtifactHash07505699": Object {
+      "Description": "Artifact hash for asset \\"e514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6b\\"",
       "Type": "String",
     },
-    "AssetParameters64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642S3BucketFC68C7BB": Object {
-      "Description": "S3 bucket for asset \\"64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642\\"",
+    "AssetParameterse514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6bS3BucketE935D81D": Object {
+      "Description": "S3 bucket for asset \\"e514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6b\\"",
       "Type": "String",
     },
-    "AssetParameters64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642S3VersionKey573D4223": Object {
-      "Description": "S3 key for asset version \\"64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642\\"",
+    "AssetParameterse514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6bS3VersionKeyBA6A6082": Object {
+      "Description": "S3 key for asset version \\"e514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6b\\"",
       "Type": "String",
     },
   },
@@ -192,7 +192,7 @@ Object {
       "Properties": Object {
         "Code": Object {
           "S3Bucket": Object {
-            "Ref": "AssetParameters64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642S3BucketFC68C7BB",
+            "Ref": "AssetParameterse514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6bS3BucketE935D81D",
           },
           "S3Key": Object {
             "Fn::Join": Array [
@@ -205,7 +205,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642S3VersionKey573D4223",
+                          "Ref": "AssetParameterse514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6bS3VersionKeyBA6A6082",
                         },
                       ],
                     },
@@ -218,7 +218,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters64ef35df3319942b9630e18f506a952a91f106de7b74e86d8af1029c041c0642S3VersionKey573D4223",
+                          "Ref": "AssetParameterse514405b6e11300c9411cc6b9627b52f9f1e415b244bf6e2bd0ea94d3b715f6bS3VersionKeyBA6A6082",
                         },
                       ],
                     },
