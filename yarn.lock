@@ -2094,9 +2094,9 @@ camelcase@^7.0.0:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001449:
-  version "1.0.30001451"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001451.tgz#2e197c698fc1373d63e1406d6607ea4617c613f1"
-  integrity sha512-XY7UbUpGRatZzoRft//5xOa69/1iGJRBlrieH6QYrkKLIFn3m7OVEJ81dSrKoy2BnKsdbX5cLrOispZNYo9v2w==
+  version "1.0.30001452"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001452.tgz#dff7b8bb834b3a91808f0a9ff0453abb1fbba02a"
+  integrity sha512-Lkp0vFjMkBB3GTpLR8zk4NwW5EdRdnitwYJHDOOKIU85x4ckYCPQ+9WlVvSVClHxVReefkUMtWZH2l9KGlD51w==
 
 case@^1.6.3:
   version "1.6.3"
@@ -2273,9 +2273,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^3.2.27, constructs@^3.3.69:
-  version "3.4.245"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.245.tgz#561204f8a08131475d358b19987d550206739446"
-  integrity sha512-jNkEqG9LFhquxYTeR979H5GOmJx5XH5hpZJw7teB4VJyAjWMXhjve/0CusevN69FA2mX4edJ0fc+B1YmEXDpOg==
+  version "3.4.246"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.246.tgz#011d9d1b7289c0a093c26eb3019b71d22816eafd"
+  integrity sha512-lqWfMf5xzdKWNXIZezttTcLmwr9S3rkJJECjRO7TU8WHTti3fEk/GamfC08EYPwnUoJOixUh+Eo8zZY3Nc6dJQ==
 
 conventional-changelog-config-spec@^2.1.0:
   version "2.1.0"
@@ -5046,10 +5046,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.67.51:
-  version "0.67.51"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.67.51.tgz#51ac7b7ae1d449728bbbd9e29af4ec3817e48286"
-  integrity sha512-Bd0mZdos7vUgVlZ1TE+sWr5X+3XLtYhsVNNrIHo4zzdNhMMyYitSnCW4miRzuW41hcai0MvwMebvKHYlPY+rcg==
+projen@^0.67.54:
+  version "0.67.54"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.67.54.tgz#d2f13d880017b312a459b71a05f012d81a3f868c"
+  integrity sha512-F4iTzjE3gE50gAyvZZmmdweYtTUtv5PMKajaLOt2UKull9GlaJKvd6UjRqER8Wh2Uyu11TDWooUMKkDmK1lg6g==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
