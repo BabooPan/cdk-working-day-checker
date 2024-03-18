@@ -36,7 +36,6 @@ cdk.context.json
 yarn-error.log
 coverage
 venv
-!/.projenrc.js
 /test-reports/
 junit.xml
 /coverage/
@@ -56,3 +55,4 @@ junit.xml
 /cdk.out/
 .cdk.staging/
 .parcel-cache/
+!/.projenrc.js
