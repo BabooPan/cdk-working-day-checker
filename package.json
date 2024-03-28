@@ -47,7 +47,7 @@
     "eslint-plugin-import": "^2.29.1",
     "jest": "^27",
     "jest-junit": "^15",
-    "projen": "^0.80.10",
+    "projen": "^0.80.14",
     "ts-jest": "^27",
     "ts-node": "^9",
     "typescript": "^3.9.10"
