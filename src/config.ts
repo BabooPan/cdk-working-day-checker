@@ -18,8 +18,8 @@ export interface RecordProps {
 }
 
 export const record:RecordProps = {
-  recordName: 'workingday',
-  domainName: 'baboopan.net',
-  zoneId: 'Z00292561235P7FTLUPZ9',
-  certArn: 'arn:aws:acm:us-west-2:471856162574:certificate/63d81b75-628d-4ee7-8696-46f619e8c77e',
+  recordName: process.env.RECORD_NAME ?? 'workingday',
+  domainName: process.env.DOMAIN_NAME ?? 'example.com',
+  zoneId: process.env.ZONE_ID ?? 'Z0000000000000000000',
+  certArn: process.env.CERT_ARN ?? 'arn:aws:acm:us-west-2:000000000000:certificate/00000000-0000-0000-0000-000000000000',
 };
